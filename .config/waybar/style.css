@@ -10,7 +10,7 @@ window#waybar {
 .modules-left {
     border-radius: 50px;
     background-color: rgba(51, 51, 51, 1.0);
-    padding: 4 6px;
+    padding: 0 4 0 32px;
 }
 
 .modules-center {
@@ -20,8 +20,9 @@ window#waybar {
 
 .modules-right {
     border-radius: 50px;
+    margin: 0 -20px;
     background-color: rgba(51, 51, 51, 1.0);
-    padding: 4 6px;
+    padding: 0 24px;
 }
 
 tooltip {
@@ -29,7 +30,7 @@ tooltip {
     border: 1px solid rgba(34, 34, 34, 0.5);
     border-radius: 12px;
 
-    font-family: "Inconsolata SemiBold", "Symbols Nerd Font";
+    font-family: "LXGW WenKai Mono",/* "Inconsolata SemiBold", */"Symbols Nerd Font";
     font-size: 16px;
 }
 
@@ -40,32 +41,33 @@ tooltip {
 #pulseaudio,
 #tray,
 #mode,
-#window,
-#workspaces {
+#window/*
+#workspaces */{
     margin-top: 0px;
     margin-bottom: 0px;
-    padding: 0px 4px 0px 4px;
+    padding: 0px 6px 0px 1px;
     background-color: transparent;
 
-    font-family: "Inconsolata SemiBold", "Symbols Nerd Font";
-    font-size: 16px;
+    font-family: "LXGWWenKaiMono Nerd Font";
+    font-size: 18px;
 }
 
 #workspaces {
     /* border: rgba(255, 255, 255, 0.2) solid 2px; */
-    padding: 4px 8px;
+    padding: 0px 8px 0px 8px;
 
     transition-property: background, color, border;
+    font-family: "Symbols Nerd Font";
     transition-duration: 0s;
 }
 
 #workspaces button {
     border: none;
     border-radius: 0px;
-    padding: 0px 0px;
+    padding: 0px 0px 0px 0px;
     background: transparent;
     color: #ffffff;
-    margin: 0 4px;
+    margin: 0 2px;
     min-width: 24px;
 
     transition-property: background, color, border, margin, padding;
@@ -84,7 +86,7 @@ tooltip {
 #workspaces button.active {
     /* background: #ffffff; */
     color: #ffffff;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     margin-bottom: 1px;
     /* padding: 0 4px; */
 }
@@ -121,8 +123,9 @@ tooltip {
 
 #mpd {
     color: #fffff1;
-    font-family: "Noto Sans CJK SemiBold";
-    font-size: 15;
+    font-family: "LXGWWenKaiMono Nerd Font";
+    font-size: 18px;
+    padding: 0px 8px 0px 8px;
 }
 
 #tray {
@@ -132,5 +135,8 @@ tooltip {
 
 #window {
     color: #e6f2d6;
+    padding: 0px 8px 0px 6px;
     margin-left: 4px;
+    font-size: 15px;
+    font-family: "Inconsolata-Semibold";
 }

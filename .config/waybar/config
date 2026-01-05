@@ -1,16 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 5,
-    "margin-top": 5,
-    "margin-left": 6,
-    "margin-right": 6,
+    "spacing": 10,
+    "margin-top": 3,
+    "margin-left": -30,
+    "margin-right": 0,
     "margin-bottom": 0,
     "height": 36,
     "modules-left": [
-        "hyprland/window"
-    ],
-    "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
@@ -31,25 +28,25 @@
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "format-icons": {
-            "1": "\uf303",
-            "2": "\uf121",
-            "3": "\uf484",
-            "4": "\uf013",
-            "5": "\uf11b"
-        }
+        // "format-icons": {
+        //     "1": "\uf303",
+        //     "2": "\uf121",
+        //     "3": "\uf484",
+        //     "4": "\uf013",
+        //     "5": "\uf11b"
+        // }
     },
     "hyprland/window": {
         "format": "\uf105 {initialTitle}",
         "separate-outputs": true
     },
     "tray": {
-        "icon-size": 23,
+        "icon-size": 24,
         "spacing": 10
     },
     "clock": {
         "interval": 1,
-        "format": "\uf017 {:%H:%M:%S}",
+        "format": "\uf017  {:%H:%M:%S}",
         "format-alt": "\uf133 {:%Y-%m-%d %H:%M:%S}",
         "tooltip-format": "{calendar}",
         "timezone": "Asia/Shanghai",
@@ -76,18 +73,18 @@
     },
     "cpu": {
         "interval": 1,
-        "format": "\uf4bc {usage:1}%",
+        "format": "\uf4bc  {usage:1}%",
         "tooltip": true
     },
     "memory": {
         "interval": 1,
-        "format": "\uefc5 {percentage}% {used:0.1f}G",
+        "format": "\uefc5  {percentage}% {used:0.1f}G",
         "tooltip": true,
         "tooltip-format": " RAM: {used:0.2f}G / {total:0.2f}G\nSwap: {swapUsed:0.2f}G / {swapTotal:0.2f}G"
     },
     "network": {
         "interval": 1,
-        "format-wifi": "\uf1eb {essid}",
+        "format-wifi": "\uf1eb  {essid}",
         "format-ethernet": "\uef09 {ifname}",
         "format-linked": "\ueb32 No IP ({ifname})",
         "format-disconnected": "\uf071 Disconnected",
@@ -96,13 +93,12 @@
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume:2}%",
+        "format": "{icon}  {volume:2}%",
         "format-muted": "\ueee8",
         "format-bluetooth": "{icon}\uf294 {volume}%",
         "format-bluetooth-muted": "\ueee8 {icon}\uf294",
         "format-icons": {
             "default": [
-                "\uf026",
                 "\uf027",
                 "\uf028"
             ]
@@ -114,7 +110,7 @@
         ]
     },
     "battery": {
-        "bat": "BAT2",
+        "bat": "BAT8",
         "interval": 60,
         "states": {
             "warning": 30,
@@ -131,28 +127,27 @@
         "max-length": 25
     },
     "mpd": {
-        "format": "{stateIcon} {artist} - {title}",
+        "format": "{stateIcon} {artist} - {title} {randomIcon}",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "interval": 15,
-        "artist-len": 10,
-        "title-len": 12,
+        "interval": 8,
         "consume-icons": {
             "on": " "
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
+            "off": "",
             "on": " "
         },
         "repeat-icons": {
-            "on": " "
+            "off": "",
+            "on": ""
         },
         "single-icons": {
             "on": "1 "
         },
         "state-icons": {
             "paused": "",
-            "playing": ""
+            "playing": ""
         },
         "tooltip-format": "{songPosition}/{queueLength} {filename}\n[{elapsedTime:%M:%S}/{totalTime:%M:%S}]  {album}",
         "tooltip-format-disconnected": "MPD disconnected"
